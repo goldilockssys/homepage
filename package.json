@@ -1,5 +1,6 @@
 {
   "name": "homepage",
+  "homepage": "https://goldilockssys.github.io/homepage",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
