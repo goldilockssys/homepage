@@ -15,7 +15,7 @@ function App() {
       {/* 헤더 */}
       <header className="header">
         <div className="logo-container">
-        <img src={`./../public/images/logo1.png`} alt="Goldilocks Logo" className="logo" />
+        <img src={`${process.env.PUBLIC_URL}/images/logo1.png`} alt="Goldilocks Logo" className="logo" />
         </div>
         <nav>
           <ul className="menu">
@@ -71,7 +71,7 @@ function App() {
             {/* 이미지 섹션 */}
             <div className="image-section">
               <div className="image-box">
-                <img src={`./../public/images/aboutus1.jpg`} alt="이미지 1" />
+                <img src={`${process.env.PUBLIC_URL}/images/aboutus1.jpg`} alt="이미지 1" />
               </div>
             </div>
           </div>
@@ -123,10 +123,10 @@ function App() {
 
           <div className="vision-images">
             <div className="image-box">
-              <img src={`./../public/images/vision3.png`} alt="이미지 1" />
+              <img src={`${process.env.PUBLIC_URL}/images/vision3.png`} alt="이미지 1" />
             </div>
             <div className="image-box">
-              <img src={`./../public/images/vision4.png`} alt="이미지 2" />
+              <img src={`${process.env.PUBLIC_URL}/images/vision4.png`} alt="이미지 2" />
             </div>
           </div>
         </div>
@@ -176,10 +176,10 @@ function App() {
           {/* 이미지 섹션 */}
           <div className="mission-images">
             <div className="image-box">
-              <img src={`./../public/images/mission1.png`} alt="Mission 이미지 1" />
+              <img src={`${process.env.PUBLIC_URL}/images/mission1.png`} alt="Mission 이미지 1" />
             </div>
             <div className="image-box">
-              <img src={`./../public/images/mission2.png`} alt="Mission 이미지 2" />
+              <img src={`${process.env.PUBLIC_URL}/images/mission2.png`} alt="Mission 이미지 2" />
             </div>
           </div>
         </div>
@@ -219,10 +219,10 @@ function App() {
   {/* History 이미지 */}
   <div className="history-images">
     <div className="history-image-box">
-      <img src={`./../public/images/history1.png`} alt="History Image 1" />
+      <img src={`${process.env.PUBLIC_URL}/images/history1.png`} alt="History Image 1" />
     </div>
     <div className="history-image-box">
-      <img src={`./../public/images/history2.png`} alt="History Image 2" />
+      <img src={`${process.env.PUBLIC_URL}/images/history2.png`} alt="History Image 2" />
     </div>
   </div>
 </section>
@@ -237,19 +237,19 @@ function App() {
 
   <div className="service-cards">
     <div className="service-card logistics">
-    <img src={`./../public/images/logistics-icon.png`} alt="Trade Agency" className="service-icon" />
+    <img src={`${process.env.PUBLIC_URL}/images/logistics-icon.png`} alt="Trade Agency" className="service-icon" />
       <h3>Logistics</h3>
       <p>GOLDILOCKS는 동남아 국경을 중심으로 운송 솔루션을 제공합니다. FTL(Full Truckload) 및 LTL(Less-than-Truckload) 운송 서비스를 통해 고객의 화물을 안전하고 신속하게 처리하며, 효율적인 물류를 관리하고 맞춤형 운송 체계를 지원합니다.</p>
     </div>
 
     <div className="service-card devops">
-    <img src={`./../public/images/devops-icon.png`} alt="Trade Agency" className="service-icon" />
+    <img src={`${process.env.PUBLIC_URL}/images/devops-icon.png`} alt="Trade Agency" className="service-icon" />
       <h3>DevOps</h3>
       <p>GOLDILOCKS는 IT 개발자들을 통해 고객 업무를 자동화할 수 있는 시스템을 개발하고 있습니다. 삼성SDS와 같은 대형 기업에 도입된 “COCODOT”은 데이터 기반 자동화를 경험할 수 있습니다.</p>
     </div>
 
     <div className="service-card trade-agency">
-    <img src={`./../public/images/trade-icon.png`} alt="Trade Agency" className="service-icon" />
+    <img src={`${process.env.PUBLIC_URL}/images/trade-icon.png`} alt="Trade Agency" className="service-icon" />
       <h3>Trade Agency</h3>
       <p>GOLDILOCKS는 고객이 글로벌 시장에서 경쟁력을 강화하고 성장할 수 있도록, 맞춤형 무역 및 수출입 솔루션을 제공합니다. 글로벌 네트워크와 전문적 파트너십을 통해 다양한 물류 솔루션을 제공하며, 글로벌 물류 및 무역 전문가들이 함께합니다.</p>
     </div>
@@ -261,28 +261,28 @@ function App() {
 
         <div className="team-cards">
           <div className="team-card">
-          <img src={`./../public/images/hanoi-office.png`} alt="Vietnam(Hanoi)" className="team-image" />
+          <img src={`${process.env.PUBLIC_URL}/images/hanoi-office.png`} alt="Vietnam(Hanoi)" className="team-image" />
             <div className="team-location">
               Vietnam(Hanoi) - 2021
             </div>
           </div>
 
           <div className="team-card">
-          <img src={`./../public/images/suzhou-office.png`} alt="China(Shanghai)" className="team-image" />
+          <img src={`${process.env.PUBLIC_URL}/images/suzhou-office.png`} alt="China(Shanghai)" className="team-image" />
             <div className="team-location">
               China(Shanghai) - 2023
             </div>
           </div>
 
           <div className="team-card">
-          <img src={`./../public/images/la-office.png`} alt="Singapore" className="team-image" />
+          <img src={`${process.env.PUBLIC_URL}/images/la-office.png`} alt="Singapore" className="team-image" />
             <div className="team-location">
             United States(LA) - 2025
             </div>
           </div>
 
           <div className="team-card">
-          <img src={`./../public/images/somewhere.png`} alt="United States(LA)" className="team-image" />
+          <img src={`${process.env.PUBLIC_URL}/images/somewhere.png`} alt="United States(LA)" className="team-image" />
             <div className="team-location">
               Somewhere - 2027
             </div>
@@ -322,10 +322,10 @@ function App() {
           </div>
 
           <div className="devops-right">
-            <img src={`./../public/images/dashboard.png`} alt="Dashboard" className="devops-image" />
-            <img src={`./../public/images/report.png`} alt="Report" className="devops-image" />
-            <img src={`./../public/images/map.png`} alt="Map" className="devops-image" />
-            <img src={`./../public/images/progress.png`} alt="Progress" className="devops-image" />
+            <img src={`${process.env.PUBLIC_URL}/images/dashboard.png`} alt="Dashboard" className="devops-image" />
+            <img src={`${process.env.PUBLIC_URL}/images/report.png`} alt="Report" className="devops-image" />
+            <img src={`${process.env.PUBLIC_URL}/images/map.png`} alt="Map" className="devops-image" />
+            <img src={`${process.env.PUBLIC_URL}/images/progress.png`} alt="Progress" className="devops-image" />
           </div>
         </div>
       </section>
@@ -354,13 +354,13 @@ function App() {
           </div>
 
           <div className="contact-qr">
-          <img src={`./../public/images/QR_code.png`} alt="QR Code" className="qr-image" />
+          <img src={`${process.env.PUBLIC_URL}/images/QR_code.png`} alt="QR Code" className="qr-image" />
             <p>kakaotalk</p>
           </div>
         </div>
 
         <div className="contact-right">
-        <img src={`./../public/images/service-menu.png`} alt="New Menu" className="contact-image large" />
+        <img src={`${process.env.PUBLIC_URL}/images/service-menu.png`} alt="New Menu" className="contact-image large" />
         
         </div>
       </section>
