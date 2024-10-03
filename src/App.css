@@ -76,7 +76,7 @@ body {
   justify-content: center;
   align-items: center;
   text-align: center;
-  background-image: url('C:/Users/zotac/Desktop/homepage/public/images/home_1page.png');
+  background-image: url('./../public/images/home_1page.png');
   background-size: cover;
   background-position: center;
   color: white;
@@ -100,7 +100,7 @@ body {
 /* About Us 섹션 */
 .about-us {
   height: 90vh;
-  background-image: url('C:/Users/zotac/Desktop/homepage/public/images/home_2page.png');
+  background-image: url('./../public/images/home_2page.png');
   background-size: cover;
   background-position: center;
   padding: 40px;
