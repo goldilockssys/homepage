@@ -1,36 +1,47 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './App.css';
 
 function App() {
-  // 부드러운 스크롤을 위한 함수
+  const [menuOpen, setMenuOpen] = useState(false);
+
+  const toggleMenu = () => {
+    setMenuOpen(!menuOpen);
+  };
+
   const scrollToSection = (id) => {
     const section = document.getElementById(id);
     if (section) {
       section.scrollIntoView({ behavior: 'smooth' });
     }
+    setMenuOpen(false);
   };
 
   return (
-    <div className="App">
-      {/* 헤더 */}
-      <header className="header">
-        <div className="logo-container">
-        <img src={`${process.env.PUBLIC_URL}/images/logo1.png`} alt="Goldilocks Logo" className="logo" />
-        </div>
-        <nav>
-          <ul className="menu">
-            <li onClick={() => scrollToSection('about-us')}>About Us</li>
-            <li onClick={() => scrollToSection('vision')}>Vision</li>
-            <li onClick={() => scrollToSection('mission')}>Mission</li>
-            <li onClick={() => scrollToSection('history')}>History</li>
-            <li onClick={() => scrollToSection('services')}>Services</li>
-            <li onClick={() => scrollToSection('team')}>Team</li>
-            <li onClick={() => scrollToSection('devops')}>DevOps</li>
-            <li onClick={() => scrollToSection('contact')}>Contact</li>
-          </ul>
-        </nav>
-      </header>
-
+	<div className="App">
+	      <header className="header">
+	        <div className="logo-container">
+	          <img
+	            src={`${process.env.PUBLIC_URL}/images/logo1.png`}
+	            alt="Goldilocks"
+	            className="logo"
+	          />
+	        </div>
+	        <nav>
+	          <button className="hamburger" onClick={toggleMenu}>
+	            ☰
+	          </button>
+	          <ul className={`menu ${menuOpen ? 'open' : ''}`}>
+	            <li onClick={() => scrollToSection('about-us')}>About Us</li>
+	            <li onClick={() => scrollToSection('vision')}>Vision</li>
+	            <li onClick={() => scrollToSection('mission')}>Mission</li>
+	            <li onClick={() => scrollToSection('history')}>History</li>
+	            <li onClick={() => scrollToSection('services')}>Services</li>
+	            <li onClick={() => scrollToSection('team')}>Team</li>
+	            <li onClick={() => scrollToSection('devops')}>DevOps</li>
+	            <li onClick={() => scrollToSection('contact')}>Contact</li>
+	          </ul>
+	        </nav>
+	      </header>
       {/* 첫 번째 페이지 (배너) */}
       <section className="banner">
         <div className="banner-content">
