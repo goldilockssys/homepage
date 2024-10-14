@@ -104,84 +104,70 @@ body {
   margin-top: -2vw;
 }
 
-/* About Us 섹션 */
+/* About Us Section */
 .about-us {
-  height: 90vh;
+  padding: 60px 20px;
   background-color: white;
-  /*background-image: url('./../public/images/home_2page.png');
-  /* background-image: url('/images/home_2page.png'); */
-  background-size: cover;
-  background-position: center;
-  padding: 40px;
-  display: flex;
-  justify-content: space-between;
-  box-sizing: border-box;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
-/* About Us 제목 스타일 */
+/* About Us Content Layout */
+.about-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 20px;
+}
+
+.about-left {
+  flex: 1;
+  max-width: 600px;
+}
+
+/* About Us Title */
 .about-title {
-  font-size: clamp(3rem, 2vw, 4rem);
+  font-size: clamp(2.5rem, 4vw, 3.5rem);
   font-weight: 900;
   color: black;
-  display: inline-block;
-}
-
-.highlight {
-  color: orange;
-  font-weight: 900;
-  display: inline-block;
-}
-
-/* About Us 본문 레이아웃 */
-.about-body {
-  display: flex;
-  justify-content: space-between;
-  width: 100%;
-}
-
-.about-text p {
-  margin-bottom: 40px;
-  line-height: 1.6;
-}
-
-/* 텍스트 섹션 */
-.text-section {
-  width: 100%;
-  font-size: clamp(0.5rem, 2vw, 1.2rem);
-  padding-right: 20px;
-  margin-right: 20px;
-  flex: 1;
   margin-bottom: 20px;
-  box-sizing: border-box;
-  overflow: visible;
-  min-height: 500px;
 }
 
-/* 이미지 섹션 */
-.image-section {
-  width: 40%;
-  margin-left: 20px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: flex-end;
+.about-title .highlight {
+  color: orange;
+}
+
+/* About Us Text */
+.about-text {
+  font-size: 1.1rem;
+  color: #333;
+  line-height: 1.8;
+  margin-bottom: 20px;
+}
+
+/* About Us Right Side (Image Section) */
+.about-right {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+  flex: 1;
+  margin-top: 20px;
 }
 
 .image-box {
   width: 100%;
   height: auto;
-  margin-bottom: 20px;
+  padding: 5px;
 }
 
-.image-box img {
-  width: 100%;
-  height: auto;
-}
+/* Responsive Design */
+@media (max-width: 768px) {
+  .about-content {
+    flex-direction: column;
+  }
 
-/* 화면이 1300px 이하일 때 이미지 숨기기 */
-@media (max-width: 1300px) {
-  .image-section {
-    display: none;
+  .about-right {
+    grid-template-columns: 1fr;
   }
 }
 
