@@ -55,6 +55,16 @@ body {
   text-decoration: underline;
 }
 
+  .menu.active {
+    display: flex;
+  }
+}
+
+.menu.open {
+    display: flex;
+  }
+
+
 /* 햄버거 메뉴 스타일 (모바일용) */
 .hamburger {
   display: none;
@@ -174,14 +184,6 @@ body {
   }
 }
 
-  .menu.active {
-    display: flex;
-  }
-}
-
-.menu.open {
-    display: flex;
-  }
 
 /* Vision 섹션 */
 .vision {
