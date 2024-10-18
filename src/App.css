@@ -137,14 +137,14 @@ body {
 
 /* About Us Title */
 .about-title {
-  font-size: clamp(2.5rem, 4vw, 3.5rem) !important;
+  font-size: clamp(2.5rem, 4vw, 3.5rem);
   font-weight: 900;
   color: black;
   margin-bottom: 20px;
 }
 
 .about-title .highlight {
-  color: orange !important;
+  color: orange;
 }
 
 /* About Us Text */
