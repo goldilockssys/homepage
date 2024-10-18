@@ -58,7 +58,6 @@ body {
   .menu.active {
     display: flex;
   }
-}
 
 .menu.open {
     display: flex;
