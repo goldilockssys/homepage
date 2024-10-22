@@ -65,7 +65,7 @@ function App() {
             <div className="text-section">
               <div className="about-text">
                 <p>
-                  <strong>**GOLDILOCKS Co., Ltd.**</strong>는 <strong>2024년</strong> 설립된 물류 및 IT 솔루션 전문 기업으로, <strong>중국-베트남 국경운송</strong>에 특화된 서비스와 최첨단 <strong>물류 관리 시스템</strong>을 제공하고 있습니다. 우리는 물류 산업의 복잡한 문제를 해결하고, 고객이 보다 효율적이고 체계적으로 업무를 처리할 수 있도록 돕고 있습니다.
+                  <strong>**GOLDILOCKS Co., Ltd.**</strong>는 <strong>2021년</strong> 설립된 물류 및 IT 솔루션 전문 기업으로, <strong>중국-베트남 국경운송</strong>에 특화된 서비스와 최첨단 <strong>물류 관리 시스템</strong>을 제공하고 있습니다. 우리는 물류 산업의 복잡한 문제를 해결하고, 고객이 보다 효율적이고 체계적으로 업무를 처리할 수 있도록 돕고 있습니다.
                 </p>
                 <p>
                   특히, <strong>Cocodot 플랫폼</strong>을 통해 실시간 데이터 관리, 운송 추적, 자동화된 배차 시스템 등을 도입하여 고객의 물류 운영을 혁신적으로 변화시키고 있습니다. 또한, 국경 운송뿐만 아니라 <strong>무역 및 수출입 에이전트</strong>로서, 글로벌 시장에서의 성장을 돕는 다양한 서비스를 제공하고 있습니다.
