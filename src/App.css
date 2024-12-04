@@ -121,7 +121,6 @@ body {
   margin: 0 auto;
 }
 
-/* About Us Content Layout */
 .about-content {
   display: flex;
   justify-content: space-between;
@@ -134,7 +133,6 @@ body {
   max-width: 600px;
 }
 
-/* About Us Title */
 .about-title {
   font-size: clamp(2.5rem, 4vw, 3.5rem);
   font-weight: 900;
@@ -146,7 +144,6 @@ body {
   color: orange;
 }
 
-/* About Us Text */
 .about-text {
   font-size: 1.1rem;
   color: #333;
@@ -154,30 +151,71 @@ body {
   margin-bottom: 20px;
 }
 
-/* About Us Right Side (Image Section) */
-.about-right {
+/* 이미지 섹션 스타일 수정 */
+.image-section {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr;
   gap: 10px;
   flex: 1;
   margin-top: 20px;
 }
 
-.image-box {
+.image-section .image-box {
   width: 100%;
-  height: auto;
-  padding: 5px;
+  position: relative;
+  padding-top: 25%; /* 이미지 비율 조정 */
+  overflow: hidden;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-/* Responsive Design */
-@media (max-width: 768px) {
+.image-section .image-box img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 45%; /* 이미지 위치 미세 조정 */
+}
+
+/* 반응형 디자인 */
+@media (max-width: 1024px) {
   .about-content {
     flex-direction: column;
   }
 
+  .about-left {
+    max-width: 100%;
+  }
 
+  .image-section {
+    width: 100%;
+    margin-top: 40px;
+  }
+
+  .image-section .image-box {
+    padding-top: 35%; /* 모바일에서의 이미지 비율 */
+  }
 }
 
+@media (max-width: 768px) {
+  .about-us {
+    padding: 40px 20px;
+  }
+
+  .about-title {
+    font-size: 2rem;
+  }
+
+  .about-text {
+    font-size: 1rem;
+  }
+
+  .image-section .image-box {
+    padding-top: 45%; /* 더 작은 화면에서의 이미지 비율 */
+  }
+}
 
 /* Vision 섹션 */
 .vision {
@@ -186,205 +224,226 @@ body {
   padding: 60px 40px;
   display: flex;
   justify-content: space-between;
-  align-items: flex-start; /* 텍스트와 이미지 상단 정렬 */
-  height: 90vh; /* 전체 높이를 90vh로 제한 */
+  align-items: flex-start;
+  min-height: 100vh;
   box-sizing: border-box;
-  overflow: hidden; /* 페이지를 넘어가는 내용 숨김 */
+  overflow: visible;
 }
 
 .vision-content {
   display: flex;
   justify-content: space-between;
   width: 100%;
-  max-width: 100%;
+  max-width: 1200px;
   margin: 0 auto;
+  gap: 40px;
 }
 
 .vision-left {
-  max-width: 1000px;
-  text-align: left; /* 텍스트를 좌측 정렬 */
-  margin-right: 5%;
-
+  flex: 1;
+  max-width: 60%;
+  text-align: left;
 }
 
 .vision-title {
   font-size: clamp(2.5rem, 4vw, 3.5rem);
   font-weight: 900;
-  text-align: left; /* 제목도 좌측 정렬 */
+  text-align: left;
+}
+
+.vision-title span {
+  color: orange;
 }
 
 .vision-list {
   list-style: none;
-  font-size: clamp(0.5rem, 2vw, 1.2rem);
   padding: 0;
   margin: 20px 0;
 }
 
 .vision-list li {
   display: flex;
-  align-items: center;
-  margin-bottom: 30px;
-}
-
-.circle {
-  width: 50px;
-  height: 50px;
-  background-color: orange;
-  color: white;
-  border-radius: 50%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-size: 1.5rem;
-  font-weight: bold;
-  margin-right: 20px;
+  align-items: flex-start;
+  margin-bottom: 40px;
 }
 
 .vision-images {
+  flex: 1;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
-  width: 45%;
+  gap: 20px;
+  max-width: 40%;
+  margin-top: 120px;
 }
 
-.image-box {
-  margin-bottom: 20px;
-  max-height: 40vh; /* 이미지 높이를 최대 40% 뷰포트 높이로 제한 */
-  overflow: hidden; /* 이미지가 넘칠 경우 숨김 처리 */
-}
-
-.image-box img {
+.vision-images .image-box {
   width: 100%;
   height: auto;
-  max-height: 100%; /* 이미지가 부모의 max-height를 넘지 않도록 설정 */
+  margin-bottom: 40px;
 }
 
-/* 화면이 1300px 이하일 때 이미지 숨기기 */
+.vision-images .image-box img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-radius: 8px;
+  max-height: 300px;
+}
+
+/* 반응형 설정 */
 @media (max-width: 1300px) {
+  .vision-content {
+    flex-direction: column;
+  }
+
+  .vision-left {
+    max-width: 100%;
+    margin-right: 0;
+  }
+
   .vision-images {
-    display: none; /* 이미지 섹션을 숨김 */
+    max-width: 100%;
+    margin-top: 40px;
+  }
+}
+
+@media (max-width: 768px) {
+  .vision {
+    padding: 40px 20px;
+  }
+
+  .vision-title {
+    font-size: 2rem;
+  }
+
+  .vision-list li {
+    font-size: 0.9rem;
   }
 }
 
 /* Mission Section */
 .mission {
-  background-color: white; /* White background to match vision style */
-  color: black; /* Default text color black */
-  padding: 60px 40px; /* Add padding for consistent spacing */
+  background-color: white;
+  color: black;
+  padding: 60px 40px;
   display: flex;
-  justify-content: space-between; /* Text on the left, image on the right */
-  align-items: flex-start; /* Align text and images at the top */
-  height: 90vh;
+  justify-content: space-between;
+  align-items: flex-start;
+  min-height: 100vh;
   box-sizing: border-box;
-  overflow: hidden;
+  overflow: visible;
 }
 
 .mission-content {
   display: flex;
   justify-content: space-between;
   width: 100%;
-  max-width: 100%;
+  max-width: 1200px;
   margin: 0 auto;
+  gap: 40px;
 }
 
 .mission-left {
-  max-width: 1000px;
-  text-align: left; /* Left-align the text */
-  margin-right: 5%; /* Margin on the right to space it from the images */
+  flex: 1;
+  max-width: 60%;
+  text-align: left;
 }
 
 .mission-title {
   font-size: clamp(2.5rem, 4vw, 3.5rem);
   font-weight: 900;
-  color: black; /* Our 텍스트는 검정색 */
+  color: black;
   margin-bottom: 20px;
 }
 
 .mission-title span {
-  color: orange; /* Mission 텍스트는 오렌지색 */
+  color: orange;
 }
 
-/* Mission Text Styling */
+/* Mission 리스트 스타일 */
 .mission-list {
   list-style: none;
-  font-size: clamp(0.5rem, 2vw, 1.2rem);
   padding: 0;
   margin: 20px 0;
 }
 
 .mission-list li {
   display: flex;
-  align-items: center;
-  margin-bottom: 30px;
+  align-items: flex-start;
+  margin-bottom: 40px;
 }
 
-.circle {
-  width: 50px;
-  height: 50px;
-  background-color: orange;
-  color: white;
-  border-radius: 50%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-size: 1.5rem;
+.mission-list li div:last-child {
+  flex: 1;
+}
+
+.mission-list li h3 {
+  margin: 0 0 10px 0;
+  font-size: 1.2rem;
   font-weight: bold;
-  margin-right: 20px;
+  line-height: 1.4;
+  color: black;
 }
 
-.mission-list h3 {
+.mission-list li p {
   margin: 0;
-  font-weight: bold;
-  color: black; /* Section headings black */
-}
-
-.mission-list p {
+  font-size: 1rem;
   line-height: 1.6;
-  margin: 10px 0 0 0;
-  color: black; /* Paragraphs are black */
-  font-size: clamp(0.5rem, 2vw, 1.2rem);
+  color: #333;
 }
 
-/* Mission Images Section */
+/* Mission 이미지 섹션 */
 .mission-images {
+  flex: 1;
   display: flex;
   flex-direction: column;
-  width: 45%; /* Set image section width */
+  gap: 20px;
+  max-width: 40%;
+  margin-top: 120px;
 }
 
-.image-box {
-  margin-bottom: 20px;
-  height: 60vh; /* Increase the height for the images */
-  overflow: hidden; /* Ensure no overflow */
-}
-
-.image-box img {
+.mission-images .image-box {
   width: 100%;
-  height: 100%; /* Make the image fill the available height */
-  object-fit: cover; /* Ensure the image covers the container without distortion */
+  height: auto;
+  margin-bottom: 40px;
 }
 
+.mission-images .image-box img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-radius: 8px;
+  max-height: 300px;
+}
 
-/* Hide images on smaller screens */
+/* 반응형 설정 */
 @media (max-width: 1300px) {
-  .mission-images {
-    display: none; /* Hide the image section on smaller screens */
-  }
-}
-
-/* Responsive Mission Section */
-@media (max-width: 768px) {
-  .mission {
-    flex-direction: column;
-  }
-
   .mission-content {
     flex-direction: column;
-    align-items: center;
   }
 
-  .mission-left, .mission-images {
-    width: 100%; /* Full-width for text and images on smaller screens */
+  .mission-left {
+    max-width: 100%;
+    margin-right: 0;
+  }
+
+  .mission-images {
+    max-width: 100%;
+    margin-top: 40px;
+  }
+}
+
+@media (max-width: 768px) {
+  .mission {
+    padding: 40px 20px;
+  }
+
+  .mission-title {
+    font-size: 2rem;
+  }
+
+  .mission-list li {
+    font-size: 0.9rem;
   }
 }
 
@@ -403,7 +462,7 @@ body {
   font-size: clamp(2.5rem, 4vw, 3.5rem); /* 반응형 타이틀 크기 */
   font-weight: 900;
   color: black; /* 타이틀 색상 */
-  margin-bottom: 20px; /* 타이틀과 내용 사이 여백 */
+  margin-bottom: 20px; /* 타이틀과 내 사이 여백 */
   text-align: center; /* 타이틀 중앙 정렬 */
 }
 
@@ -554,7 +613,7 @@ body {
 }
 
 .service-card h3:hover {
-  color: orange; /* 마우스 오버 시 오렌지 색으로 변경 */
+  color: orange; /* 마우스 오버 시 오렌지 색으로 변 */
 }
 
 .service {
@@ -908,4 +967,68 @@ body {
   .contact-image.small {
     width: 100%;
   }
+}
+
+/* 반응형 설정 추가 */
+@media (max-width: 768px) {
+  .hamburger {
+    display: flex; /* 모바일에서 햄버거 메뉴 표시 */
+  }
+
+  .menu {
+    display: none; /* 기본적으로 메뉴 숨김 */
+    position: absolute;
+    top: 40px; /* 헤더 높이만큼 아래로 */
+    left: 0;
+    right: 0;
+    flex-direction: column;
+    background-color: black;
+    padding: 20px;
+    width: 100%;
+  }
+
+  .menu.active {
+    display: flex; /* active 클래스가 있을 때만 메뉴 표시 */
+  }
+
+  .menu li {
+    margin: 10px 0;
+    text-align: center;
+  }
+}
+
+/* 원 모양 숫자 스타일 추가 */
+.circle {
+  width: 35px;
+  height: 35px;
+  min-width: 35px;
+  background-color: orange;
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.1rem;
+  font-weight: bold;
+  margin-right: 15px;
+  margin-top: 3px; /* 제목과 수직 정렬을 위해 상단 여백 조정 */
+}
+
+/* 텍스트 컨테이너 스타일 수정 */
+.vision-list li div:last-child {
+  flex: 1;
+}
+
+.vision-list li h3 {
+  margin: 0 0 10px 0;
+  font-size: 1.2rem;
+  font-weight: bold;
+  line-height: 1.4;
+}
+
+.vision-list li p {
+  margin: 0;
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #ffffff;
 }

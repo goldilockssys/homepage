@@ -2,10 +2,10 @@ import React, { useState } from 'react';
 import './App.css';
 
 function App() {
-  const [menuOpen, setMenuOpen] = useState(false);
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const toggleMenu = () => {
-    setMenuOpen(!menuOpen);
+    setIsMenuOpen(!isMenuOpen);
   };
 
   const scrollToSection = (id) => {
@@ -13,7 +13,7 @@ function App() {
     if (section) {
       section.scrollIntoView({ behavior: 'smooth' });
     }
-    setMenuOpen(false);
+    setIsMenuOpen(false);
   };
 
   return (
@@ -28,9 +28,11 @@ function App() {
 	        </div>
 	        <nav>
 	          <button className="hamburger" onClick={toggleMenu}>
-	            ☰
+	            <div></div>
+	            <div></div>
+	            <div></div>
 	          </button>
-	          <ul className={`menu ${menuOpen ? 'open' : ''}`}>
+	          <ul className={`menu ${isMenuOpen ? 'active' : ''}`}>
 	            <li onClick={() => scrollToSection('about-us')}>About Us</li>
 	            <li onClick={() => scrollToSection('vision')}>Vision</li>
 	            <li onClick={() => scrollToSection('mission')}>Mission</li>
@@ -65,7 +67,7 @@ function App() {
             <div className="text-section">
               <div className="about-text">
                 <p>
-                  <strong>**GOLDILOCKS Co., Ltd.**</strong>는 <strong>2021년</strong> 설립된 물류 및 IT 솔루션 전문 기업으로, <strong>중국-베트남 국경운송</strong>에 특화된 서비스와 최첨단 <strong>물류 관리 시스템</strong>을 제공하고 있습니다. 우리는 물류 산업의 복잡한 문제를 해결하고, 고객이 보다 효율적이고 체계적으로 업무를 처리할 수 있도록 돕고 있습니다.
+                  <strong>**GOLDILOCKS Co., Ltd.**</strong>는 <strong>2021년</strong> 설립된 물류 및 IT 솔루션 전문 기업��로, <strong>중국-베트남 국경운송</strong>에 특화된 서비스와 최첨단 <strong>물류 관리 시스템</strong>을 제공하고 있습니다. 우리는 물류 산업의 복잡한 문제를 해결하고, 고객이 보다 효율적이고 체계적으로 업무를 처리할 수 있도록 돕고 있습니다.
                 </p>
                 <p>
                   특히, <strong>Cocodot 플랫폼</strong>을 통해 실시간 데이터 관리, 운송 추적, 자동화된 배차 시스템 등을 도입하여 고객의 물류 운영을 혁신적으로 변화시키고 있습니다. 또한, 국경 운송뿐만 아니라 <strong>무역 및 수출입 에이전트</strong>로서, 글로벌 시장에서의 성장을 돕는 다양한 서비스를 제공하고 있습니다.
@@ -93,7 +95,7 @@ function App() {
       <section id="vision" className="vision">
         <div className="vision-content">
           <div className="vision-left">
-            <h1 className="vision-title">Our <span className="highlight">Vision</span></h1>
+            <h1 className="vision-title">Our <span>Vision</span></h1>
 
             <ul className="vision-list">
               <li>
@@ -113,7 +115,7 @@ function App() {
                   <h3>물류 자동화 및 혁신적인 IT 솔루션 리더</h3>
                   <p>
                     우리는 <strong>Cocodot 플랫폼</strong>을 통해 물류 업계에서 <strong>자동화와 데이터 기반 의사결정</strong>을 선도하는 기업이 되는 것을 목표로 합니다. 
-                    실시간 운송 추적, 자동 배차 시스템, 데이터 통합 관리 등 혁신적인 IT 솔루션을 지속적으로 개발하여, 
+                    실시간 운송 ��적, 자동 배차 시스템, 데이터 통합 관리 등 혁신적인 IT 솔루션을 지속적으로 개발하여, 
                     고객이 <strong>물류 운영의 투명성과 효율성</strong>을 극대화할 수 있도록 돕겠습니다.
                   </p>
                 </div>
@@ -165,7 +167,7 @@ function App() {
                 <div>
                   <h3>기술을 통해 물류 혁신 선도</h3>
                   <p>
-                    우리는 IT 솔루션을 기반으로 물류 산업에서 자동화와 데이터 통합을 촉진합니다. 
+                    우리는 IT 솔루션을 기반으로 물류 ��업에서 자동화와 데이터 통합을 촉진합니다. 
                     <strong>Cocodot 플랫폼</strong>을 통해 실시간 물류 추적 및 관리가 가능하며, 
                     고객에게 보다 신속하고 정확한 서비스를 제공합니다.
                   </p>
@@ -262,7 +264,7 @@ function App() {
     <div className="service-card trade-agency">
     <img src={`${process.env.PUBLIC_URL}/images/trade-icon.png`} alt="Trade Agency" className="service-icon" />
       <h3>Trade Agency</h3>
-      <p>GOLDILOCKS는 고객이 글로벌 시장에서 경쟁력을 강화하고 성장할 수 있도록, 맞춤형 무역 및 수출입 솔루션을 제공합니다. 글로벌 네트워크와 전문적 파트너십을 통해 다양한 물류 솔루션을 제공하며, 글로벌 물류 및 무역 전문가들이 함께합니다.</p>
+      <p>GOLDILOCKS는 고객이 글로벌 시장에서 경쟁력을 강화하고 성장할 수 있도록, 맞춤형 무역 및 수출입 솔루션을 제공합니다. 글로벌 네트워크와 전문적 파트너십을 통해 다양한 물류 솔루션을 제공하며, 글로��� 물류 및 무역 전문가들이 함께합니다.</p>
     </div>
   </div>
 </section>
@@ -325,7 +327,7 @@ function App() {
                 <div className="stat-label">Driver</div>
               </div>
               <div className="stat-box">
-                <div className="stat-icon">🔍</div>
+                <div className="stat-icon"></div>
                 <div className="stat-number">Traking BOT</div>
                 <div className="stat-label">Cocodot</div>
               </div>
