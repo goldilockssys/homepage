@@ -139,7 +139,7 @@ function App() {
               <img src={`${process.env.PUBLIC_URL}/images/vision3.png`} alt="이미지 1" />
             </div>
             <div className="image-box">
-              <img src={`${process.env.PUBLIC_URL}/images/vision4.png`} alt="이미지 2" />
+              <img src={`${process.env.PUBLIC_URL}/images/vision4.jpg`} alt="이미지 2" />
             </div>
           </div>
         </div>
